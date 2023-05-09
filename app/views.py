@@ -4,6 +4,8 @@ from django.core.mail import send_mail
 
 # Create your views here.
 from app.forms import *
+def home(request):
+    return render(request,'home.html')
 def registration(request):
     ufd=userform()
     pfd=profileform()
