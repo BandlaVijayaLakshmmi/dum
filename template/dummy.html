@@ -17,6 +17,11 @@
             <a href="{% url 'admin:index'%}" class="nav-link">Admin-page</a>
             <a href="{% url 'registration'%}" class="nav-link">Registration</a>
             <a href="{% url 'home' %}" class="nav-link">Home Page</a>
+            {% if user.is_auticated %}
+            <a href="{% url 'user_logout' %}" class="nav-link">user_logout</a>
+            {% else %} 
+            <a href="{% url 'user_login' %}" class="nav-link">user_login</a>
+            {% endif %}
         </nav>
     </center>
 
